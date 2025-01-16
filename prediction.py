@@ -119,19 +119,37 @@ for dataset_name, f1 in f1_scores.items():
 print(f"\nHarmonic Mean of F1 Scores: {harmonic_mean:.4f}")
 
 """
-EPOCHS = 10
+EPOCH = 20
 F1 Scores:
-bloodmnist: 0.8160
-breastmnist: 0.7111
-dermamnist: 0.2872
-octmnist: 0.6358
-organamnist: 0.7348
-organcmnist: 0.7038
-organsmnist: 0.4780
-pathmnist: 0.7176
-pneumoniamnist: 0.9051
-retinamnist: 0.2951
-tissuemnist: 0.3900
+bloodmnist: 0.8800
+breastmnist: 0.7520
+dermamnist: 0.3466
+octmnist: 0.6615
+organamnist: 0.7500
+organcmnist: 0.7183
+organsmnist: 0.4141
+pathmnist: 0.6614
+pneumoniamnist: 0.8917
+retinamnist: 0.3394
+tissuemnist: 0.3637
 
-Harmonic Mean of F1 Scores: 0.5235
+Harmonic Mean of F1 Scores: 0.5410
+
+------------------------------------------------------------
+
+EPOCH = 30
+F1 Scores:
+bloodmnist: 0.8832
+breastmnist: 0.7571
+dermamnist: 0.3985
+octmnist: 0.6842
+organamnist: 0.7605
+organcmnist: 0.7210
+organsmnist: 0.5766
+pathmnist: 0.6902
+pneumoniamnist: 0.8964
+retinamnist: 0.3630
+tissuemnist: 0.3566
+
+Harmonic Mean of F1 Scores: 0.5794
 """
