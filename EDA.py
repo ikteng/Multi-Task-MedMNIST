@@ -82,6 +82,7 @@ print(f"\nTotal test samples: {total_test}")
 
 """
 Output:
+
 data\bloodmnist.npz
 Available keys in dataset: KeysView(NpzFile 'data\\bloodmnist.npz' with keys: train_images, train_labels, val_images, val_labels, test_images...)
 Train size: 11959
@@ -112,10 +113,10 @@ Test image dimensions: (28, 28)
 Classes: 2
 Labels: 0 1
 Class distribution 
-        0 -> 26.92% 
+        0 -> 26.92%
         1 -> 73.08%
 data\dermamnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\dermamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\dermamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)     
 Train size: 7007
 Train image dimensions: (28, 28, 3)
 Val size: 1003
@@ -133,7 +134,7 @@ Class distribution
         5 -> 66.98%
         6 -> 1.41%
 data\octmnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\octmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\octmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)       
 Train size: 97477
 Train image dimensions: (28, 28)
 Val size: 10832
@@ -148,7 +149,7 @@ Class distribution
         2 -> 7.95%
         3 -> 47.22%
 data\organamnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\organamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\organamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)    
 Train size: 34581
 Train image dimensions: (28, 28)
 Val size: 6491
@@ -170,7 +171,7 @@ Class distribution
         9 -> 8.76%
         10 -> 10.30%
 data\organcmnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\organcmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\organcmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)    
 Train size: 13000
 Train image dimensions: (28, 28)
 Val size: 2392
@@ -192,7 +193,7 @@ Class distribution
         9 -> 9.02%
         10 -> 12.09%
 data\organsmnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\organsmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\organsmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)    
 Train size: 13940
 Train image dimensions: (28, 28)
 Val size: 2452
@@ -214,7 +215,7 @@ Class distribution
         9 -> 14.38%
         10 -> 11.16%
 data\pathmnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\pathmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\pathmnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)      
 Train size: 89996
 Train image dimensions: (28, 28, 3)
 Val size: 10004
@@ -234,7 +235,7 @@ Class distribution
         7 -> 10.45%
         8 -> 14.32%
 data\pneumoniamnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\pneumoniamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\pneumoniamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...) 
 Train size: 4708
 Train image dimensions: (28, 28)
 Val size: 524
@@ -247,7 +248,7 @@ Class distribution
         0 -> 25.79%
         1 -> 74.21%
 data\retinamnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\retinamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)
+Available keys in dataset: KeysView(NpzFile 'data\\retinamnist.npz' with keys: train_images, val_images, test_images, train_labels, val_labels...)    
 Train size: 1080
 Train image dimensions: (28, 28, 3)
 Val size: 120
@@ -263,7 +264,7 @@ Class distribution
         3 -> 17.96%
         4 -> 6.11%
 data\tissuemnist.npz
-Available keys in dataset: KeysView(NpzFile 'data\\tissuemnist.npz' with keys: train_images, train_labels, val_images, val_labels, test_images...)
+Available keys in dataset: KeysView(NpzFile 'data\\tissuemnist.npz' with keys: train_images, train_labels, val_images, val_labels, test_images...)    
 Train size: 165466
 Train image dimensions: (28, 28)
 Val size: 23640
