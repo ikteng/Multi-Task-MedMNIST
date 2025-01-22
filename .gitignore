@@ -1,7 +1,4 @@
 
-*.npz
-/cnn_model
 /cnn_model_30
-/cnn_model_50
+/data
 /cnn_model_old_30
-/cnn_model_old_50
