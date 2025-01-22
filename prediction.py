@@ -5,8 +5,10 @@ import tensorflow as tf
 import csv
 from sklearn.metrics import f1_score
 
+EPOCH = 30
 DATA_DIR = 'data'  # Directory containing the dataset files
-MODEL_DIR = 'model'  # Directory containing the trained models
+MODEL_DIR = f'cnn_model_old_{EPOCH}'  # Directory containing the trained models
+SUBMISSION_FILE = f'submission_old_{EPOCH}.csv'
 
 # Function to generate predictions and calculate F1 scores for all tasks
 def evaluate_and_predict(models, datasets, dataset_names):
@@ -80,10 +82,10 @@ for file_name in os.listdir(DATA_DIR):
 
     dataset = np.load(file_path)  # Load the dataset
 
-    # Display dataset details
-    print(f"Dataset: {dataset_name}, Test Images: {dataset['test_images'].shape[0]}")
-    print("Test Images:", dataset['test_images'].shape)
-    print("Test Labels:", dataset['test_labels'].shape)
+    # # Display dataset details
+    # print(f"Dataset: {dataset_name}, Test Images: {dataset['test_images'].shape[0]}")
+    # print("Test Images:", dataset['test_images'].shape)
+    # print("Test Labels:", dataset['test_labels'].shape)
 
     # Load the corresponding trained model
     model_path = os.path.join(MODEL_DIR, f'{dataset_name}_model.keras')
@@ -99,14 +101,14 @@ predictions, f1_scores = evaluate_and_predict(models, datasets, dataset_names)
 
 # Calculate total number of images across all datasets
 total_images = sum(dataset['test_images'].shape[0] for dataset in datasets)
-print(f"Total images across all tasks: {total_images}")
+# print(f"Total images across all tasks: {total_images}")
 
 # Validate that the total number of rows matches the predictions generated
 total_rows = len(predictions)
-print(f"Total predictions generated: {total_rows}")
+# print(f"Total predictions generated: {total_rows}")
 
 # Save the predictions to a CSV file
-generate_submission_file(predictions, 'submission.csv')
+generate_submission_file(predictions, SUBMISSION_FILE)
 
 # Calculate the harmonic mean of F1 scores across all tasks
 harmonic_mean = compute_harmonic_mean(f1_scores)
@@ -118,38 +120,61 @@ for dataset_name, f1 in f1_scores.items():
 
 print(f"\nHarmonic Mean of F1 Scores: {harmonic_mean:.4f}")
 
+
 """
-EPOCH = 20
+
+Submission file saved to submission_old_30.csv
+
 F1 Scores:
-bloodmnist: 0.8800
+bloodmnist: 0.8695
+breastmnist: 0.6969
+dermamnist: 0.3844
+octmnist: 0.6527
+organamnist: 0.7435
+organcmnist: 0.6794
+organsmnist: 0.4997
+pathmnist: 0.7005
+pneumoniamnist: 0.8999
+retinamnist: 0.3051
+tissuemnist: 0.3662
+
+Harmonic Mean of F1 Scores: 0.5477
+
+--------------------------------------------------
+Submission file saved to submission_old_50.csv
+
+F1 Scores:
+bloodmnist: 0.8807
 breastmnist: 0.7520
-dermamnist: 0.3466
-octmnist: 0.6615
-organamnist: 0.7500
-organcmnist: 0.7183
-organsmnist: 0.4141
-pathmnist: 0.6614
-pneumoniamnist: 0.8917
-retinamnist: 0.3394
-tissuemnist: 0.3637
+dermamnist: 0.3995
+octmnist: 0.6076
+organamnist: 0.7648
+organcmnist: 0.7452
+organsmnist: 0.5417
+pathmnist: 0.6742
+pneumoniamnist: 0.8846
+retinamnist: 0.3281
+tissuemnist: 0.3572
 
-Harmonic Mean of F1 Scores: 0.5410
+Harmonic Mean of F1 Scores: 0.5621
 
-------------------------------------------------------------
+"""
 
-EPOCH = 30
+"""
+Submission file saved to submission_cnn_30.csv
+
 F1 Scores:
-bloodmnist: 0.8832
-breastmnist: 0.7571
-dermamnist: 0.3985
-octmnist: 0.6842
-organamnist: 0.7605
-organcmnist: 0.7210
-organsmnist: 0.5766
-pathmnist: 0.6902
-pneumoniamnist: 0.8964
-retinamnist: 0.3630
-tissuemnist: 0.3566
+bloodmnist: 0.9381
+breastmnist: 0.7116
+dermamnist: 0.4717
+octmnist: 0.7477
+organamnist: 0.8354
+organcmnist: 0.8023
+organsmnist: 0.6371
+pathmnist: 0.6643
+pneumoniamnist: 0.8496
+retinamnist: 0.3297
+tissuemnist: 0.4990
 
-Harmonic Mean of F1 Scores: 0.5794
+Harmonic Mean of F1 Scores: 0.6228
 """
